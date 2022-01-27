@@ -19,3 +19,27 @@ SELECT *
 FROM employees
 WHERE last_name LIKE '%q%'
     AND NOT last_name LIKE '%qu%';
+
+# ascending order
+SELECT first_name, last_name
+FROM employees.employees
+ORDER BY last_name;
+
+# descending order
+SELECT first_name, last_name
+FROM employees.employees
+ORDER BY last_name DESC;
+
+# chain descending and ascending statements
+SELECT first_name, last_name
+FROM employees.employees
+ORDER BY last_name DESC, first_name ASC;
+
+SELECT first_name, last_name
+FROM employees.employees
+ORDER BY last_name DESC, first_name ASC, emp_no DESC;
+
+SELECT first_name
+FROM employees
+GROUP BY first_name;
+
