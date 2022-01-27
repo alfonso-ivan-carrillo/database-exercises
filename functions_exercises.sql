@@ -99,19 +99,8 @@ FROM employees
 WHERE month(birth_date) = 12
   AND day(birth_date) = 25
   AND year(hire_date) BETWEEN 1990 AND 2000
-ORDER BY hire_date DESC;
+ORDER BY birth_date, hire_date DESC;
 
-SELECT NOW();
-
-SELECT CURDATE();
-
-SELECT CURTIME();
-
-SELECT CONCAT(
-               'Teaching people to code for ',
-               UNIX_TIMESTAMP() - UNIX_TIMESTAMP('2014-02-04'),
-               ' seconds'
-           );
 
 SELECT *
 FROM employees
@@ -120,6 +109,7 @@ WHERE month(birth_date) = 12
   AND year(hire_date) BETWEEN 1990 AND 2000
 ORDER BY hire_date DESC;
 
+# SELECT first_name, last_name, CONCAT(datediff(now(), hire_date)), 'days)'
 SELECT DATEDIFF(CURDATE(), hire_date )
 FROM employees
 WHERE month(birth_date) = 12
