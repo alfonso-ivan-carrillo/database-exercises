@@ -107,3 +107,5 @@
 # # WONT WORK BECAUSE OF ABOVE UNIQUE CONSTRAINT
 # INSERT INTO players (first_name, last_name, team_id, position)
 # VALUES ('Joe', 'Burrow', 1, 'Quarterback');
+
+#inner joins will only display information if there is info available, will not display a column/row if value is NULL
