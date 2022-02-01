@@ -115,8 +115,7 @@ FROM employees AS emp
          JOIN dept_manager AS dm ON dm.emp_no = emp.emp_no
          JOIN departments AS d ON d.dept_no = dm.dept_no
          JOIN salaries AS s ON s.emp_no = emp.emp_no
-WHERE s.to_date >= now() AND dm.to_date >= now()
-ORDER BY d.dept_name;
+WHERE s.to_date >= now();
 
 
 SELECT e.first_name AS name, dm.emp_no AS employee_id, s.salary AS salary
